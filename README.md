@@ -27,7 +27,7 @@ Si lo desean, pueden instalar nvm (Node Version Manager) para gestionar las vers
 Funciones declaradas dentro del ámbito léxico.
 Tienen acceso a variables declaradas en la función padre.
 Es posible gracias al sistema de ámbitos de JS.
-https://developer.mozilla.org/es/docs/Web/JavaScript/Closures 
+[Mas info aquí](https://developer.mozilla.org/es/docs/Web/JavaScript/Closures)
 
 ### Funciones de primer nivel o primer orden o alto orden
 Pueden ser tratadas como variables.
