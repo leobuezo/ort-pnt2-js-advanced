@@ -43,6 +43,7 @@ Javascript tiene funciones que actúan de forma asíncrona. Se puede dar en:
 - browser APIs
 - función de encolado: function queue
 - ciclo de eventos
+
 [Video: La pila de ejecución o callstack](https://www.youtube.com/watch?v=ygA5U7Wgsg8&t=5s)
 
 ### Ejemplo de funciones asíncronas:
