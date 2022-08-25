@@ -33,17 +33,17 @@ Es posible gracias al sistema de ámbitos de JS.
 Pueden ser tratadas como variables.
 Permiten la creación de funciones de alto nivel tomando una o más funciones y devuelven estas también. Ej: map()
 Son la base para la creación y gestión del ciclo de vida de componentes.
+[Mas info aquí](https://developer.mozilla.org/es/docs/Glossary/First-class_Function)
 
 ### Asincronicidad
 Javascript es un lenguaje sincronizado, ejecutado en un solo hilo.
 Una función que toma mucho tiempo correr va a causar problemas de performance y eventualmente congelar la página.
-Javascript tiene funciones que actúan de forma asíncrona.
-
-Se puede dar en :
+Javascript tiene funciones que actúan de forma asíncrona. Se puede dar en:
 - ejecución en pilas 
 - browser APIs
 - función de encolado: function queue
 - ciclo de eventos
+[Video: La pila de ejecución o callstack](https://www.youtube.com/watch?v=ygA5U7Wgsg8&t=5s)
 
 ### Ejemplo de funciones asíncronas:
 setTimeout()
@@ -51,14 +51,15 @@ XMLHttpRequest(), jQuery.ajax(), fetch()
 llamadas a bases de datos (persistencia local)
 
 ### Stack Overflow y recursividad
-Hay que tener cuidado con esto y la gestión de eventos.
+Básicamente, una función recursiva es aquella que se llama a sí misma. Hay que tener cuidado con esto y la gestión de eventos.
 
 ### Callbacks
 Flujo de control con llamadas asíncronas.
 Ejecuta la función una vez la llamada asíncrona retorna un valor.
+[Mas info aquí](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
 
 ### Promesas
 Solución al problema de callbacks.
 Te permite escribir un código que asume que un valor es retornado dentro de una función completada.
 Solo necesita un solo manejador de errores.
-
+[Mas info aquí](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Using_promises)
