@@ -24,7 +24,7 @@ import personas from './personas.js'
  * 
  */
 
-const CANTIDAD_CONTACTOS = 3
+const CANTIDAD_CONTACTOS = 5
 const nombres = ['Carlos', 'Gabriel', 'Camila', 'Leo', 'Santiago']
 const apellidos = ['Landa', 'Fiorito', 'Pignata', 'Buezo', 'Guzman']
 
@@ -42,8 +42,8 @@ const crearContacto = () => {
     }
 }
 
-const prueba = crearContacto()
-console.log(prueba)
+//const prueba = crearContacto()
+//console.log(prueba)
 
 const contactos = Array.from({
     length: CANTIDAD_CONTACTOS,
@@ -55,10 +55,64 @@ const reductora = personas.reduce( elem => elem )
 
 /**
  * Ejemplo reduce sumando las edades del listado
- */
+
 const sumEdad = contactos.reduce((previousValue, elem) => {
     console.log(previousValue, elem)
     return previousValue + elem.edad
 }, 0)
 
 console.log('Sumatoria de edades con reduce: ', sumEdad)
+*/
+
+/**
+ * Resolvemos el ejercicio del reduce...
+ */
+ const agruparContactos = (contactos) => {
+    const agrupacion = contactos.reduce((objetoActual, contacto) => {
+        // empieza el show
+        const firstLetter = contacto.nombreCompleto[0]
+        //console.log(objetoActual, firstLetter);
+
+        // objeto actual
+        return {
+            ...objetoActual, // el spread operator se encarga de filtar los repetidos
+            // en la primera iteración contamos con un objeto vacío, 
+            // esto nos da undefined por lo que no podemos usar el spread con undefined.
+            [firstLetter]: [...objetoActual[firstLetter] || [], contacto] 
+        }
+    }, {})
+    console.log(agrupacion)
+}
+
+const agrupacionPorLetra = agruparContactos(contactos)
+console.log(agrupacionPorLetra)
+/**
+ * CONSIGNA FINAL: 
+ * Con el objeto agrupacion devolver un array agrupado por titulo (primera letra)
+ * y ordenado alfabeticamente.
+ * Ejemplo:
+ * [
+ *  {
+ *      "title": "A",
+ *      "data": [{}, {}, {}]
+ * },
+ *  {
+ *      "title": "B",
+ *      "data": [{}, {}, {}]
+ * },
+ *  {
+ *      "title": "C",
+ *      "data": [{}, {}, {}]
+ * },
+ * ]
+ */
+
+const letras = Object.keys(agrupacionPorLetra).sort()
+const listaContactos = letras.map(letra => {
+    return {
+        title: letra,
+        data: agrupacion[letra]
+    }
+})
+console.log(listaContactos)
+
