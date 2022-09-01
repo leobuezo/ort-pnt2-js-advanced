@@ -72,9 +72,9 @@ window.document me devuelve todo el DOM completo.
 React separa la capa de datos de la capa de la vista.
 
 **React**
-__Inicialización del proyecto:__
+Inicialización del proyecto:
     $ npx create-react-app mi-primera-app
 Esto crea un proyecto de React por scaffolding. Para correr el proyecto se debe ejecutar lo siguiente:
 	$ npm start
-Luego acceder a http://localhost:300
+Luego acceder a http://localhost:3000
 
