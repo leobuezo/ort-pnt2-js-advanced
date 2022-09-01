@@ -64,3 +64,17 @@ Solución al problema de callbacks.
 Te permite escribir un código que asume que un valor es retornado dentro de una función completada.
 Solo necesita un solo manejador de errores.
 [Mas info aquí](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Using_promises)
+
+---------------------------------------------------------------------------------------------
+
+### Clase 3 - ES6+ y el DOM del Browser, Introducción a React, JSX
+window.document me devuelve todo el DOM completo.
+React separa la capa de datos de la capa de la vista.
+
+**React**
+__Inicialización del proyecto:__
+    $ npx create-react-app mi-primera-app
+Esto crea un proyecto de React por scaffolding. Para correr el proyecto se debe ejecutar lo siguiente:
+	$ npm start
+Luego acceder a http://localhost:300
+
